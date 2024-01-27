@@ -1,0 +1,28 @@
+{
+  "editor.formatOnSave": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "cSpell.words": [
+    "Bairro",
+    "Cadastrar",
+    "Cidade",
+    "Classif",
+    "Classificação",
+    "cnpj",
+    "Cnpj",
+    "CNPJ",
+    "Código",
+    "completo",
+    "Convencional",
+    "Digite",
+    "Endereço",
+    "instalação",
+    "monthform",
+    "tarifária",
+    "Telefone",
+    "venc",
+    "vencimento",
+    "Vencimento"
+  ]
+}
