@@ -1,7 +1,7 @@
 export default function PrivacyPolicy() {
   return (
     <main className="mx-10 p4 mt-5">
-      <h2 className="text-gray-700 font-bold">Política de Privacidade</h2>
+      <h2 className="text-gray-700">Política de Privacidade</h2>
       <p className="text-gray-700">
         A sua privacidade é importante para nós. É política do Propostasmp
         respeitar a sua privacidade em relação a qualquer informação sua que
@@ -19,7 +19,7 @@ export default function PrivacyPolicy() {
       <p className="text-gray-700">
         Apenas retemos as informações coletadas pelo tempo necessário para
         fornecer o serviço solicitado. Quando armazenamos dados, protegemos
-        dentro de meios comercialmente aceitáveis ​​para evitar perdas e roubos,
+        dentro de meios comercialmente aceitáveis para evitar perdas e roubos,
         bem como acesso, divulgação, cópia, uso ou modificação não autorizados.
       </p>
 
@@ -69,7 +69,7 @@ export default function PrivacyPolicy() {
       <p className="text-gray-700">
         Utilizamos anúncios para compensar os custos de funcionamento deste site
         e fornecer financiamento para futuros desenvolvimentos. Os cookies de
-        publicidade comportamental usados ​​por este site foram projetados para
+        publicidade comportamental usados por este site foram projetados para
         garantir que você forneça os anúncios mais relevantes sempre que
         possível, rastreando anonimamente seus interesses e apresentando coisas
         semelhantes que possam ser do seu interesse.
@@ -84,7 +84,7 @@ export default function PrivacyPolicy() {
         fazer uma compra.
       </p>
 
-      <h2 className="text-gray-700 mt-6 font-bold">Compromisso do Usuário</h2>
+      <h2 className="text-gray-700 mt-6">Compromisso do Usuário</h2>
       <p className="text-gray-700">
         O usuário se compromete a fazer uso adequado dos conteúdos e da
         informação que o Propostasmp oferece no site e com caráter enunciativo,
