@@ -38,6 +38,7 @@ export const ModalProvider = ({ children }) => {
         setSelectedCustomer,
         average,
         calculateAverage,
+        setAverage,
       }}
     >
       {children}

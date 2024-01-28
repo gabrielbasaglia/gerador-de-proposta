@@ -1,12 +1,11 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { api } from "../../../../../lib/api";
 
 export function NewCustomerForm({ userId }) {
-  const { register, handleSubmit, setValue, getValues } = useForm();
+  const { register, handleSubmit, setValue } = useForm();
   const router = useRouter();
 
   const kwhInputs = Array.from({ length: 12 }, (_, index) => `kwh${index + 1}`);
@@ -16,9 +15,6 @@ export function NewCustomerForm({ userId }) {
   };
 
   async function handleRegisterCustomer(data) {
-    const kwhValues = kwhInputs.map((input, index) => data[`kwh${index + 1}`]);
-    console.log(data);
-
     await api.post("/api/customer", {
       name: data.name,
       cpf_cnpj: data.cpf_cnpj,

@@ -18,7 +18,7 @@ export default async function NewCote() {
     },
   });
 
-  async function handleRegisterCote(formData) {
+  async function handleRegisterCote() {
     "use server";
   }
 
