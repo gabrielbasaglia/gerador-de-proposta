@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import { createContext, useState } from 'react';
+import { createContext, useState } from "react";
 
 export const ModalContext = createContext();
 export const ModalProvider = ({ children }) => {
@@ -14,11 +14,11 @@ export const ModalProvider = ({ children }) => {
 
   function calculateAverage(array) {
     const numericValues = array
-      .map(value => {
+      .map((value) => {
         const numericValue = parseFloat(value);
         return isNaN(numericValue) ? null : numericValue; // Use null for non-numeric values
       })
-      .filter(value => value !== null); // Filter out non-numeric values
+      .filter((value) => value !== null); // Filter out non-numeric values
 
     if (numericValues.length === 0) {
       return 0;
@@ -30,11 +30,15 @@ export const ModalProvider = ({ children }) => {
     return Math.round(average);
   }
 
-
-
   return (
     <ModalContext.Provider
-      value={{ setDatailCustomer, selectedCustomer, setSelectedCustomer, average, calculateAverage }}
+      value={{
+        setDatailCustomer,
+        selectedCustomer,
+        setSelectedCustomer,
+        average,
+        calculateAverage,
+      }}
     >
       {children}
     </ModalContext.Provider>

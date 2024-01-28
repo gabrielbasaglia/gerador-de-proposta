@@ -1,18 +1,18 @@
-import Image from 'next/image';
+import Image from "next/image";
 
 const BaseClient = () => {
   const imageClients = [
-    '/verace.webp',
-    '/cupim.png',
-    '/Diniz.png',
-    '/nicnet-fundo-branco.png',
-    '/life-sucos.png',
-    '/supercom.png',
-    '/oggi.jpg',
-    '/quinteiros.svg',
-    '/sans brunos.png',
-    '/redesol.jpeg',
-    '/profitness.jpg'
+    "/verace.webp",
+    "/cupim.png",
+    "/Diniz.png",
+    "/nicnet-fundo-branco.png",
+    "/life-sucos.png",
+    "/supercom.png",
+    "/oggi.jpg",
+    "/quinteiros.svg",
+    "/sans brunos.png",
+    "/redesol.jpeg",
+    "/profitness.jpg",
   ];
 
   return (

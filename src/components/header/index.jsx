@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import Link from 'next/link';
-import { FiUser, FiLogOut, FiLoader, FiLock } from 'react-icons/fi';
-import { signIn, signOut, useSession } from 'next-auth/react';
+import Link from "next/link";
+import { FiUser, FiLogOut, FiLoader, FiLock } from "react-icons/fi";
+import { signIn, signOut, useSession } from "next-auth/react";
 
 export function Header() {
   const { status, data } = useSession();
@@ -25,19 +25,19 @@ export function Header() {
           </h1>
         </Link>
 
-        {status === 'loading' && (
+        {status === "loading" && (
           <button className="animate-spin">
             <FiLoader size={26} color="#6C5AF4" />
           </button>
         )}
 
-        {status === 'unauthenticated' && (
+        {status === "unauthenticated" && (
           <button onClick={handleSignIn}>
             <FiLock size={26} color="#6C5AF4" />
           </button>
         )}
 
-        {status === 'authenticated' && (
+        {status === "authenticated" && (
           <div className="flex items-baseline gap-4">
             <Link href="/dashboard">
               <FiUser size={26} color="#6C5AF4" />

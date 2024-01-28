@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 export const Footer = () => {
   // Obtém o ano atual
@@ -7,7 +7,8 @@ export const Footer = () => {
   return (
     <footer className="footer text-center mt-auto mb-1 bg-slate-100 p-2">
       <small>
-        &copy; {currentYear} | Todos os direitos reservados. Construído com ♥ por{' '}
+        &copy; {currentYear} | Todos os direitos reservados. Construído com ♥
+        por{" "}
         <a
           href="https://gabrielbasaglia.tech/"
           target="_blank"
@@ -21,4 +22,3 @@ export const Footer = () => {
     </footer>
   );
 };
-

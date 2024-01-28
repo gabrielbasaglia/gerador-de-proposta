@@ -1,34 +1,28 @@
-import { Container } from '../../components/container';
-import { getServerSession } from 'next-auth';
-import { authOptions } from '../../lib/auth';
-import { redirect } from 'next/navigation';
-import Link from 'next/link';
-import { PropostasItem } from '../../app/dashboard/components/propostas/index';
-import Image from 'next/image';
-import  desenvol  from '../../assets/desenvol.gif';
+import { Container } from "../../components/container";
+import { getServerSession } from "next-auth";
+import { authOptions } from "../../lib/auth";
+import { redirect } from "next/navigation";
+import Link from "next/link";
+import { PropostasItem } from "../../app/dashboard/components/propostas/index";
+import Image from "next/image";
+import desenvol from "../../assets/desenvol.gif";
 export default async function Dashboard() {
   const session = await getServerSession(authOptions);
 
   if (!session || !session.user) {
-    redirect('/');
+    redirect("/");
   }
 
   return (
     <Container>
       <main className="mt-9 mb-2">
-        <div className='w-full justify-center flex'>
-
-      <Image
-      src={desenvol}
-      alt="desenvol"
-      width={600}
-      height={245}
-      />
-      </div>
+        <div className="w-full justify-center flex">
+          <Image src={desenvol} alt="desenvol" width={600} height={245} />
+        </div>
         <div className="flex items-center justify-between">
           <h1 className="text-3xl font-bold">Propostas</h1>
           <Link
-            href={'/dashboard/new'}
+            href={"/dashboard/new"}
             className=" bg-indigo-500 px-4 py-1 rounded text-white"
           >
             Abrir proposta
