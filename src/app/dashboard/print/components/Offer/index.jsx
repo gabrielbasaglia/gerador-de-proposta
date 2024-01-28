@@ -1,5 +1,5 @@
-import { useContext, useEffect, useState } from 'react'
-import { ModalContext } from '../../../../../providers/modal'
+import { useContext, useEffect, useState } from "react"
+import { ModalContext } from "../../../../../providers/modal"
 
 const Offer = () => {
   const { selectedCustomer, calculateAverage } = useContext(ModalContext)
@@ -8,7 +8,7 @@ const Offer = () => {
   useEffect(() => {
     const kwhValues = Array.from(
       { length: 12 },
-      (_, index) => selectedCustomer?.[`kwh${index + 1}`] || 0
+      (_, index) => selectedCustomer?.[`kwh${index + 1}`] || 0,
     )
 
     // Filter out zero values
@@ -26,11 +26,11 @@ const Offer = () => {
   // Função para atribuir valores com base na classificação
   const atribuirValor = (classification) => {
     switch (classification) {
-      case 'monofasico':
+      case "monofasico":
         return 30
-      case 'bifasico':
+      case "bifasico":
         return 50
-      case 'trifasico':
+      case "trifasico":
         return 100
       default:
         return 0
@@ -38,9 +38,9 @@ const Offer = () => {
   }
 
   const valorAtualCpfl =
-    (Number(selectedCustomer?.cpfltusd.replace('R$', '').replace(',', '.')) ||
+    (Number(selectedCustomer?.cpfltusd.replace("R$", "").replace(",", ".")) ||
       0) +
-    (Number(selectedCustomer?.cpflte.replace('R$', '').replace(',', '.')) || 0)
+    (Number(selectedCustomer?.cpflte.replace("R$", "").replace(",", ".")) || 0)
 
   const valorAtualAxs = 0.71962
 
@@ -48,7 +48,7 @@ const Offer = () => {
 
   const tarifaBoleto = 3.17
 
-  const classification = selectedCustomer?.classification || 'monofasico'
+  const classification = selectedCustomer?.classification || "monofasico"
 
   // Obtém o valor atribuído com base na classificação
   const valorAtribuido = atribuirValor(classification)
@@ -77,9 +77,9 @@ const Offer = () => {
             <h2 className="font-bold mt-1">Valor</h2>
             <p className="col-start-1 ">{valorFinal}</p>
             <p>
-              {(valorFinal * valorAtualAxs).toLocaleString('pt-BR', {
-                style: 'currency',
-                currency: 'BRL',
+              {(valorFinal * valorAtualAxs).toLocaleString("pt-BR", {
+                style: "currency",
+                currency: "BRL",
               })}
             </p>
           </div>
@@ -87,9 +87,9 @@ const Offer = () => {
           <div className="flex justify-between px-3 border-b border-black p-1 bg-cyan-600">
             <p className="">Fatura minima CPFL</p>
             <span className="pr-8">
-              {minCpfl.toLocaleString('pt-BR', {
-                style: 'currency',
-                currency: 'BRL',
+              {minCpfl.toLocaleString("pt-BR", {
+                style: "currency",
+                currency: "BRL",
               })}
             </span>
           </div>
@@ -97,17 +97,17 @@ const Offer = () => {
           <div className="flex justify-between p-3 h-10 items-center bg-green-400">
             <h1 className="text-md font-bold">Valor Total</h1>
             <p className="text-md font-bold">
-              {(valorTotal + tarifaBoleto).toLocaleString('pt-BR', {
-                style: 'currency',
-                currency: 'BRL',
+              {(valorTotal + tarifaBoleto).toLocaleString("pt-BR", {
+                style: "currency",
+                currency: "BRL",
               })}
             </p>
             <span className="text-2xl font-bold">
-              {' '}
+              {" "}
               {parseInt(
                 ((average * valorAtualCpfl - valorTotal) /
                   (average * valorAtualCpfl)) *
-                  100
+                  100,
               )}
               %
             </span>

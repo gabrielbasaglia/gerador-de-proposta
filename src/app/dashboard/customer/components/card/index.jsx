@@ -1,9 +1,9 @@
-'use client'
+"use client"
 
-import { useContext } from 'react'
-import { ModalContext } from '../../../../../providers/modal'
-import { api } from '../../../../../lib/api'
-import { useRouter } from 'next/navigation'
+import { useContext } from "react"
+import { ModalContext } from "../../../../../providers/modal"
+import { api } from "../../../../../lib/api"
+import { useRouter } from "next/navigation"
 
 export function CardCustomer({ customer }) {
   const { setDatailCustomer } = useContext(ModalContext)
@@ -13,7 +13,7 @@ export function CardCustomer({ customer }) {
 
   async function handleDeleteCustomer() {
     try {
-      const response = await api.delete('/api/customer', {
+      const response = await api.delete("/api/customer", {
         params: {
           id: customer.id,
         },
@@ -28,12 +28,12 @@ export function CardCustomer({ customer }) {
   function handlePrintCustomer() {
     setDatailCustomer(customer)
 
-    router.push('./print')
+    router.push("./print")
   }
 
   return (
     <article className="flex flex-col overflow-hidden bg-gray-100 border-2 p-2 rounded-lg gap-2 hover:scale-105 duration-300 uppercase">
-      <h2 style={{ whiteSpace: 'nowrap' }}>
+      <h2 style={{ whiteSpace: "nowrap" }}>
         <span className="font-bold mr-1 ">Nome:</span>
         {customer.name}
       </h2>

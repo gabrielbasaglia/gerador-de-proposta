@@ -1,9 +1,9 @@
-'use client'
+"use client"
 
-import { useRouter } from 'next/navigation'
-import { useState } from 'react'
-import { useForm } from 'react-hook-form'
-import { api } from '../../../../../lib/api'
+import { useRouter } from "next/navigation"
+import { useState } from "react"
+import { useForm } from "react-hook-form"
+import { api } from "../../../../../lib/api"
 
 export function NewCustomerForm({ userId }) {
   const { register, handleSubmit, setValue, getValues } = useForm()
@@ -19,7 +19,7 @@ export function NewCustomerForm({ userId }) {
     const kwhValues = kwhInputs.map((input, index) => data[`kwh${index + 1}`])
     console.log(data)
 
-    await api.post('/api/customer', {
+    await api.post("/api/customer", {
       name: data.name,
       cpf_cnpj: data.cpf_cnpj,
       code: data.code,
@@ -51,7 +51,7 @@ export function NewCustomerForm({ userId }) {
       kwh12: data.kwh12,
     })
 
-    router.replace('/dashboard/customer')
+    router.replace("/dashboard/customer")
     router.refresh()
   }
   return (
@@ -69,7 +69,7 @@ export function NewCustomerForm({ userId }) {
             name="name"
             placeholder="Digite o nome completo..."
             className="w-full border-2 rounded-md h-11 px-2"
-            {...register('name', { required: true })}
+            {...register("name", { required: true })}
           />
         </div>
         <div className="flex-1">
@@ -79,7 +79,7 @@ export function NewCustomerForm({ userId }) {
             name="cpf_cnpj"
             placeholder="Digite o CPF ou CNPJ"
             className="w-full border-2 rounded-md h-11 px-2"
-            {...register('cpf_cnpj')}
+            {...register("cpf_cnpj")}
           />
         </div>
         <div className="flex-1">
@@ -91,7 +91,7 @@ export function NewCustomerForm({ userId }) {
             name="code"
             placeholder="Digite o Código de instalação"
             className="w-full border-2 rounded-md h-11 px-2"
-            {...register('code')}
+            {...register("code")}
           />
         </div>
 
@@ -102,7 +102,7 @@ export function NewCustomerForm({ userId }) {
           <select
             name="classification"
             className="w-full border-2 rounded-md h-11 px-2"
-            {...register('classification', { required: true })}
+            {...register("classification", { required: true })}
           >
             <option value="monofasico">Monofásico</option>
             <option value="bifasico">Bifásico</option>
@@ -117,7 +117,7 @@ export function NewCustomerForm({ userId }) {
             name="address"
             placeholder="Digite o Endereço"
             className="w-full border-2 rounded-md h-11 px-2"
-            {...register('address')}
+            {...register("address")}
           />
         </div>
         <div className="flex-1">
@@ -127,7 +127,7 @@ export function NewCustomerForm({ userId }) {
             name="neighborhood"
             placeholder="Digite a Bairro"
             className="w-full border-2 rounded-md h-11 px-2"
-            {...register('neighborhood', { required: true })}
+            {...register("neighborhood", { required: true })}
           />
         </div>
         <div className="flex-1">
@@ -137,7 +137,7 @@ export function NewCustomerForm({ userId }) {
             name="cep"
             placeholder="Digite o Cep"
             className="w-full border-2 rounded-md h-11 px-2"
-            {...register('cep')}
+            {...register("cep")}
           />
         </div>
         <div className="flex-1">
@@ -147,7 +147,7 @@ export function NewCustomerForm({ userId }) {
             name="city"
             placeholder="Digite a Cidade"
             className="w-full border-2 rounded-md h-11 px-2"
-            {...register('city', { required: true })}
+            {...register("city", { required: true })}
           />
         </div>
         <div className="flex-1">
@@ -157,7 +157,7 @@ export function NewCustomerForm({ userId }) {
             name="phone"
             placeholder="Ex: (xx) 99999-9999"
             className="w-full border-2 rounded-md h-11 px-2"
-            {...register('phone')}
+            {...register("phone")}
           />
         </div>
         <div className="flex-1">
@@ -167,7 +167,7 @@ export function NewCustomerForm({ userId }) {
             name="email"
             placeholder="Digite o email"
             className="w-full border-2 rounded-md h-11 px-2"
-            {...register('email')}
+            {...register("email")}
           />
         </div>
 
@@ -178,7 +178,7 @@ export function NewCustomerForm({ userId }) {
             name="venc"
             placeholder="Digite a data de vencimento"
             className="w-full border-2 rounded-md h-11 px-2"
-            {...register('venc')}
+            {...register("venc")}
           />
         </div>
 
@@ -191,7 +191,7 @@ export function NewCustomerForm({ userId }) {
             name="billsvalue"
             placeholder="Digite o valor da fatura"
             className="w-full border-2 rounded-md h-11 px-2"
-            {...register('billsvalue', { required: true })}
+            {...register("billsvalue", { required: true })}
           />
         </div>
 
@@ -202,7 +202,7 @@ export function NewCustomerForm({ userId }) {
             name="cpfltusd"
             placeholder="Digite o TUSD"
             className="w-full border-2 rounded-md h-11 px-2"
-            {...register('cpfltusd', { required: true })}
+            {...register("cpfltusd", { required: true })}
           />
         </div>
 
@@ -213,7 +213,7 @@ export function NewCustomerForm({ userId }) {
             name="cpflte"
             placeholder="Digite o TE"
             className="w-full border-2 rounded-md h-11 px-2"
-            {...register('cpflte', { required: true })}
+            {...register("cpflte", { required: true })}
           />
         </div>
 
@@ -224,7 +224,7 @@ export function NewCustomerForm({ userId }) {
             name="consultant"
             placeholder="Digite o nome do consultor"
             className="w-full border-2 rounded-md h-11 px-2"
-            {...register('consultant', { required: true })}
+            {...register("consultant", { required: true })}
           />
         </div>
 
@@ -237,7 +237,7 @@ export function NewCustomerForm({ userId }) {
             name="phoneContact"
             placeholder="Digite o contato do consultor"
             className="w-full border-2 rounded-md h-11 px-2"
-            {...register('phoneContact', { required: true })}
+            {...register("phoneContact", { required: true })}
           />
         </div>
       </section>

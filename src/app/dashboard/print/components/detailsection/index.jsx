@@ -1,4 +1,4 @@
-import { FaWhatsapp } from 'react-icons/fa'
+import { FaWhatsapp } from "react-icons/fa"
 const DetailsSection = ({ selectedCustomer }) => (
   <section className="text-sm flex uppercase my-2 px-2 border-b pb-2 border-gray-600 max-h-60 overflow-y-auto ml-auto">
     <div className="flex flex-col">

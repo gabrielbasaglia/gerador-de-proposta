@@ -1,5 +1,5 @@
-import { useContext, useEffect, useState } from 'react'
-import { ModalContext } from '../../../../../providers/modal'
+import { useContext, useEffect, useState } from "react"
+import { ModalContext } from "../../../../../providers/modal"
 
 const SimulatedProposal = () => {
   const { selectedCustomer, calculateAverage } = useContext(ModalContext)
@@ -8,7 +8,7 @@ const SimulatedProposal = () => {
   useEffect(() => {
     const kwhValues = Array.from(
       { length: 12 },
-      (_, index) => selectedCustomer?.[`kwh${index + 1}`] || 0
+      (_, index) => selectedCustomer?.[`kwh${index + 1}`] || 0,
     )
 
     // Filter out zero values
@@ -24,9 +24,9 @@ const SimulatedProposal = () => {
   }, [calculateAverage, selectedCustomer])
 
   const valorAtualCpfl =
-    (Number(selectedCustomer?.cpfltusd.replace('R$', '').replace(',', '.')) ||
+    (Number(selectedCustomer?.cpfltusd.replace("R$", "").replace(",", ".")) ||
       0) +
-    (Number(selectedCustomer?.cpflte.replace('R$', '').replace(',', '.')) || 0)
+    (Number(selectedCustomer?.cpflte.replace("R$", "").replace(",", ".")) || 0)
 
   const valorAtualAxs = 0.71962
 
@@ -71,9 +71,9 @@ const SimulatedProposal = () => {
                 {(
                   selectedCustomer?.kwh1 * valorAtualCpfl +
                   tarifaMun
-                ).toLocaleString('pt-BR', {
-                  style: 'currency',
-                  currency: 'BRL',
+                ).toLocaleString("pt-BR", {
+                  style: "currency",
+                  currency: "BRL",
                 })}
               </td>
             </tr>
@@ -86,8 +86,8 @@ const SimulatedProposal = () => {
               </td>
               <td className="text-center  py-2 px-1 border bg-green-600 border-black">
                 {(selectedCustomer?.kwh1 * valorAtualAxs).toLocaleString(
-                  'pt-BR',
-                  { style: 'currency', currency: 'BRL' }
+                  "pt-BR",
+                  { style: "currency", currency: "BRL" },
                 )}
               </td>
             </tr>
@@ -128,9 +128,9 @@ const SimulatedProposal = () => {
                 {valorAtualCpfl}
               </td>
               <td className="text-center  py-2 px-1 border bg-cyan-600 border-black">
-                {(average * valorAtualCpfl + 11.37).toLocaleString('pt-BR', {
-                  style: 'currency',
-                  currency: 'BRL',
+                {(average * valorAtualCpfl + 11.37).toLocaleString("pt-BR", {
+                  style: "currency",
+                  currency: "BRL",
                 })}
               </td>
             </tr>
@@ -142,9 +142,9 @@ const SimulatedProposal = () => {
                 0,71962
               </td>
               <td className="text-center  py-2 px-1 border bg-green-600 border-black">
-                {(average * valorAtualAxs).toLocaleString('pt-BR', {
-                  style: 'currency',
-                  currency: 'BRL',
+                {(average * valorAtualAxs).toLocaleString("pt-BR", {
+                  style: "currency",
+                  currency: "BRL",
                 })}
               </td>
             </tr>

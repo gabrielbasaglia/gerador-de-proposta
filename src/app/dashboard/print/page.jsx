@@ -1,18 +1,18 @@
-'use client'
-import { useContext, useRef } from 'react'
-import { Container } from '../../../components/container'
-import Image from 'next/image'
-import axsImg from '../../../assets/axs.webp'
-import logoCpfl from '../../../assets/logoCpfl.png'
-import mplogo from '../../../assets/mplogo.webp'
-import { ModalContext } from '../../../providers/modal'
-import { useReactToPrint } from 'react-to-print'
+"use client"
+import { useContext, useRef } from "react"
+import { Container } from "../../../components/container"
+import Image from "next/image"
+import axsImg from "../../../assets/axs.webp"
+import logoCpfl from "../../../assets/logoCpfl.png"
+import mplogo from "../../../assets/mplogo.webp"
+import { ModalContext } from "../../../providers/modal"
+import { useReactToPrint } from "react-to-print"
 
-import DetailsSection from './components/detailsection'
-import SimulatedProposal from './components/simulatedproposal'
-import Offer from './components/Offer'
-import InvoiceDetails from './components/invoiceDatail'
-import BaseClient from './components/baseclient'
+import DetailsSection from "./components/detailsection"
+import SimulatedProposal from "./components/simulatedproposal"
+import Offer from "./components/Offer"
+import InvoiceDetails from "./components/invoiceDatail"
+import BaseClient from "./components/baseclient"
 
 export default function Print() {
   const contentDocument = useRef()
@@ -69,9 +69,9 @@ export default function Print() {
                 Valor atual da fatura cpfl
               </h1>
               <p className="font-bold">
-                {new Intl.NumberFormat('pt-BR', {
-                  style: 'currency',
-                  currency: 'BRL',
+                {new Intl.NumberFormat("pt-BR", {
+                  style: "currency",
+                  currency: "BRL",
                 }).format(selectedCustomer?.billsvalue || 0)}
               </p>
             </div>

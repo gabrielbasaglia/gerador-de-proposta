@@ -1,5 +1,5 @@
-import React, { useContext } from 'react'
-import { ModalContext } from '../../../../../providers/modal'
+import React, { useContext } from "react"
+import { ModalContext } from "../../../../../providers/modal"
 
 const InvoiceDetails = () => {
   const { selectedCustomer, calculateAverage } = useContext(ModalContext)
@@ -16,7 +16,7 @@ const InvoiceDetails = () => {
   // Calcula a média usando a função do contexto
   const kwhValues = Array.from(
     { length: 12 },
-    (_, index) => selectedCustomer?.[`kwh${index + 1}`] || ''
+    (_, index) => selectedCustomer?.[`kwh${index + 1}`] || "",
   )
   const average = calculateAverage(kwhValues)
 
@@ -26,7 +26,7 @@ const InvoiceDetails = () => {
     for (let i = 0; i < 2; i++) {
       const rowData = Array.from(
         { length: 6 },
-        (_, j) => selectedCustomer?.[`kwh${i * 6 + j + 1}`]
+        (_, j) => selectedCustomer?.[`kwh${i * 6 + j + 1}`],
       )
       const nonEmptyCells = rowData.filter(Boolean) // Filter out cells with no values
       if (nonEmptyCells.length > 0) {
@@ -40,7 +40,7 @@ const InvoiceDetails = () => {
                 {kwh}
               </td>
             ))}
-          </tr>
+          </tr>,
         )
       }
     }
