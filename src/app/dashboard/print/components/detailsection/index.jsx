@@ -66,7 +66,7 @@ const DetailsSection = ({ selectedCustomer }) => (
       </div>
     </div>
 
-    <div className="md:w-1/3 flex flex-col items-end mx-auto ">
+    <div className="md:w-1/3 flex flex-col md:items-end md:mx-auto mt-2 md:mt-0 ">
       <h1 className="font-bold">dados do consultor</h1>
       <p className="">{selectedCustomer?.consultant}</p>
       <div className="flex gap-2">
