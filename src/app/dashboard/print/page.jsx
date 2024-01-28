@@ -68,12 +68,7 @@ export default function Print() {
               <h1 className="w-2/3 font-md font-bold">
                 Valor atual da fatura cpfl
               </h1>
-              <p className="font-bold">
-                {new Intl.NumberFormat("pt-BR", {
-                  style: "currency",
-                  currency: "BRL",
-                }).format(selectedCustomer?.billsvalue || 0)}
-              </p>
+              <p className="font-bold">R$ {selectedCustomer?.billsvalue}</p>
             </div>
 
             <InvoiceDetails selectedCustomer={selectedCustomer} />
