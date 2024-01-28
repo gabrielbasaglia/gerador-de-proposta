@@ -17,6 +17,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="pt-br">
+      <meta
+        name="google-site-verification"
+        content="h9lDWmOsKrEsvz6-eHOybSVI3yVu8WFxQ97P9KQP1-Y"
+      />
       <body className={`${inter.className} flex flex-col min-h-screen`}>
         <AuthProvider>
           <ModalProvider>
