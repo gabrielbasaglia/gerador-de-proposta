@@ -1,10 +1,7 @@
 export default function PrivacyPolicy() {
   return (
     <main className="flex items-center flex-col justify-center min-h-[calc(100vh-10rem)]">
-      <p
-        className="text-center
-      "
-      >
+      <p className="text-center">
         Política PrivacidadeA sua privacidade é importante para nós. É política
         do propostamp respeitar a sua privacidade em relação a qualquer
         informação sua que possamos coletar no site propostamp, e outros sites
