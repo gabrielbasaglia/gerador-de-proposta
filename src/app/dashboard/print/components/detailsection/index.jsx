@@ -1,7 +1,7 @@
 import { FaWhatsapp } from "react-icons/fa";
 const DetailsSection = ({ selectedCustomer }) => (
   <section className="text-sm flex uppercase my-2 px-2 border-b pb-2 border-gray-600 max-h-60 overflow-y-auto ml-auto">
-    <div className="flex flex-col">
+    <div className="flex flex-col w-full">
       <h2 className="font-bold">Dados do Cliente</h2>
 
       <div className="grid grid-cols-5 gap-4">

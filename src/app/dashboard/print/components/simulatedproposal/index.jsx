@@ -33,11 +33,11 @@ const SimulatedProposal = () => {
   const tarifaMun = 11.37;
 
   return (
-    <div className="flex justify-between my-1 mx-2">
-      <div className="w-64 ">
-        <div className="flex my-3  ">
+    <div className="flex justify-between my-1">
+      <div>
+        <div className="flex my-3 justify-between ">
           <h1 className="font-bold">Valor KWh CPFL</h1>
-          <p className="font-bold text-cyan-600 ml-8">R$ {valorAtualCpfl}</p>
+          <p className="font-bold text-cyan-600">R$ {valorAtualCpfl}</p>
         </div>
 
         <table>
@@ -95,10 +95,10 @@ const SimulatedProposal = () => {
         </table>
       </div>
 
-      <div className="w-64 ">
-        <div className="flex my-3  ">
+      <div>
+        <div className="flex my-3 justify-between ">
           <h1 className="font-bold">Valor KWh AXS</h1>
-          <p className="font-bold  text-green-600 ml-16">R$ {valorAtualAxs}</p>
+          <p className="font-bold  text-green-600 ">R$ {valorAtualAxs}</p>
         </div>
         <table>
           <thead>

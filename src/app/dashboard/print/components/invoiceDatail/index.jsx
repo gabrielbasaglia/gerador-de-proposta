@@ -48,7 +48,7 @@ const InvoiceDetails = () => {
   };
 
   return (
-    <div>
+    <div className="sm: scale-90 sm: flex sm: items-center sm: flex-col">
       <table className="min-w-full bg-white border border-gray-300">
         <thead>
           <tr>

@@ -31,7 +31,7 @@ export default function Print() {
         Gerar PDF
       </button>
 
-      <main ref={contentDocument} className="mt-9 mb-2 max-w-screen-a4 m-a4 ">
+      <main ref={contentDocument} className="mt-9 mb-2 max-w-screen-a4 m-a4">
         <section className="border border-gray-600 m-10">
           <div className="flex justify-between items-center pl-3 h-14 ">
             <Image
@@ -57,7 +57,7 @@ export default function Print() {
             />
           </div>
 
-          <div className="  w-full bg-gray-600 rounded items-center justify-center flex ">
+          <div className="w-full bg-gray-600 rounded items-center justify-center flex ">
             <h1 className="text-md text-white font-bold">Proposta comercial</h1>
           </div>
 

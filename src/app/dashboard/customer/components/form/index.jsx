@@ -55,7 +55,7 @@ export function NewCustomerForm({ userId }) {
       className="flex flex-col mt-6"
       onSubmit={handleSubmit(handleRegisterCustomer)}
     >
-      <section className=" uppercase grid gap-2 my-2 flex-col sm:flex-row grid-cols-2 md:grid-cols-4 ">
+      <section className=" uppercase grid gap-2 my-2 flex-col sm:flex-row grid-cols-2 md:grid-cols-4">
         <div className="flex-1">
           <label className="uppercase mb-1 text-lg font-medium">
             Nome completo
@@ -78,8 +78,8 @@ export function NewCustomerForm({ userId }) {
             {...register("cpf_cnpj")}
           />
         </div>
-        <div className="flex-1 overflow-hidden ">
-          <label className="mb-1 text-lg font-medium whitespace-nowrap ">
+        <div className="flex-1">
+          <label className="mb-1 text-lg font-medium ">
             Código de instalação
           </label>
           <input
@@ -91,8 +91,8 @@ export function NewCustomerForm({ userId }) {
           />
         </div>
 
-        <div className="flex-1 overflow-hidden">
-          <label className="mb-1 text-lg font-medium whitespace-nowrap">
+        <div className="flex-1">
+          <label className="mb-1 text-lg font-medium">
             Classificação tarifária
           </label>
           <select
@@ -178,8 +178,8 @@ export function NewCustomerForm({ userId }) {
           />
         </div>
 
-        <div className="flex-1 overflow-hidden">
-          <label className="mb-1 text-lg font-medium whitespace-nowrap">
+        <div className="flex-1">
+          <label className="mb-1 text-lg font-medium ">
             Valor da Fatura Atual
           </label>
           <input
@@ -213,10 +213,8 @@ export function NewCustomerForm({ userId }) {
           />
         </div>
 
-        <div className="flex-1 overflow-hidden">
-          <label className="mb-1 text-lg font-medium whitespace-nowrap ">
-            Nome do Consultor
-          </label>
+        <div className="flex-1">
+          <label className="mb-1 text-lg font-medium ">Nome do Consultor</label>
           <input
             type="text"
             name="consultant"
@@ -226,8 +224,8 @@ export function NewCustomerForm({ userId }) {
           />
         </div>
 
-        <div className="flex-1 overflow-hidden">
-          <label className="mb-1 text-lg font-medium whitespace-nowrap">
+        <div className="flex-1">
+          <label className="mb-1 text-lg font-medium ">
             Contato do Consultor
           </label>
           <input
