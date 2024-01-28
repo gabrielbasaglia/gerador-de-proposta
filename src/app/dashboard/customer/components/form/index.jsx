@@ -78,8 +78,8 @@ export function NewCustomerForm({ userId }) {
             {...register("cpf_cnpj")}
           />
         </div>
-        <div className="flex-1">
-          <label className="mb-1 text-lg font-medium ">
+        <div className="flex-1 overflow-hidden">
+          <label className="mb-1 text-lg font-medium whitespace-nowrap">
             Código de instalação
           </label>
           <input
@@ -91,8 +91,8 @@ export function NewCustomerForm({ userId }) {
           />
         </div>
 
-        <div className="flex-1">
-          <label className="mb-1 text-lg font-medium">
+        <div className="flex-1 overflow-hidden">
+          <label className="mb-1 text-lg font-medium whitespace-nowrap">
             Classificação tarifária
           </label>
           <select
@@ -178,8 +178,8 @@ export function NewCustomerForm({ userId }) {
           />
         </div>
 
-        <div className="flex-1">
-          <label className="mb-1 text-lg font-medium ">
+        <div className="flex-1 overflow-hidden">
+          <label className="mb-1 text-lg font-medium whitespace-nowrap">
             Valor da Fatura Atual
           </label>
           <input
@@ -213,8 +213,10 @@ export function NewCustomerForm({ userId }) {
           />
         </div>
 
-        <div className="flex-1">
-          <label className="mb-1 text-lg font-medium ">Nome do Consultor</label>
+        <div className="flex-1 overflow-hidden">
+          <label className="mb-1 text-lg font-medium whitespace-nowrap">
+            Nome do Consultor
+          </label>
           <input
             type="text"
             name="consultant"
@@ -224,8 +226,8 @@ export function NewCustomerForm({ userId }) {
           />
         </div>
 
-        <div className="flex-1">
-          <label className="mb-1 text-lg font-medium ">
+        <div className="flex-1 overflow-hidden">
+          <label className="mb-1 text-lg font-medium whitespace-nowrap">
             Contato do Consultor
           </label>
           <input
