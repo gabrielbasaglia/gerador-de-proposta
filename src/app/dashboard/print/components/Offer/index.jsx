@@ -68,10 +68,11 @@ const Offer = () => {
           Proposta simulada pela média do consumo, menos á energia disponível.
         </h2>
 
-        <div className=" text-center my-2 w-1/2 mx-auto flex justify-center flex-col border border-black">
+        <div className=" text-center p-1 md:my-2 md:w-1/2 mx-auto flex justify-center flex-col border border-black">
           <h1 className="border-b border-black">
             Valor da assinatura AXS + Boleto de R$3,00
           </h1>
+
           <div className="bg-green-600 grid grid-cols-2 border-b border-black ">
             <h2 className="font-bold mt-1">Kwh Injetado</h2>
             <h2 className="font-bold mt-1">Valor</h2>
@@ -84,7 +85,7 @@ const Offer = () => {
             </p>
           </div>
 
-          <div className="flex justify-between px-3 border-b border-black p-1 bg-cyan-600">
+          <div className="flex justify-between md:px-3 border-b border-black p-1 bg-cyan-600">
             <p className="">Fatura minima CPFL</p>
             <span className="pr-8">
               {minCpfl.toLocaleString("pt-BR", {
@@ -102,7 +103,7 @@ const Offer = () => {
                 currency: "BRL",
               })}
             </p>
-            <span className="text-2xl font-bold">
+            <span className="text-2xl font-bold border border-black w-1/3 pl-1">
               {" "}
               {parseInt(
                 ((average * valorAtualCpfl - valorTotal) /

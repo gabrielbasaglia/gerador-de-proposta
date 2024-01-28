@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { ModalContext } from "../../../../../providers/modal";
 
 const InvoiceDetails = () => {
@@ -48,8 +48,8 @@ const InvoiceDetails = () => {
   };
 
   return (
-    <div className="sm: scale-90 sm: flex sm: items-center sm: flex-col">
-      <table className="min-w-full bg-white border border-gray-300">
+    <div className="scale-90 md:scale-100">
+      <table className="bg-white border border-gray-300 w-full">
         <thead>
           <tr>
             <th
@@ -63,9 +63,13 @@ const InvoiceDetails = () => {
         <tbody>{generateTableRows()}</tbody>
       </table>
 
-      <div className="my-2">
-        <h2 className="text-center font-bold">Sua Média de Consumo é de:</h2>
-        <p className="border border-black mx-10 mt-1 text-center">{average}</p>
+      <div className="">
+        <h2 className="text-center font-bold my-2">
+          Sua Média de Consumo é de:
+        </h2>
+        <p className="border border-black w-20 mx-auto text-center">
+          {average}
+        </p>
       </div>
     </div>
   );

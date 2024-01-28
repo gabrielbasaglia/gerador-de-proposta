@@ -31,8 +31,11 @@ export default function Print() {
         Gerar PDF
       </button>
 
-      <main ref={contentDocument} className="mt-9 mb-2 max-w-screen-a4 m-a4">
-        <section className="border border-gray-600 m-10">
+      <main
+        ref={contentDocument}
+        className="mt-9 mb-2 md:max-w-screen-a4 md:m-a4"
+      >
+        <section className="border border-gray-600 md:m-10">
           <div className="flex justify-between items-center pl-3 h-14 ">
             <Image
               className="scale-105"
@@ -63,7 +66,7 @@ export default function Print() {
 
           <DetailsSection selectedCustomer={selectedCustomer} />
 
-          <section className="px-1 mx-10 text-sm">
+          <section className="px-1 md:mx-10 text-sm">
             <div className="flex justify-center mb-3 w-full ">
               <h1 className="w-2/3 font-md font-bold">
                 Valor atual da fatura cpfl
@@ -74,20 +77,20 @@ export default function Print() {
             <InvoiceDetails selectedCustomer={selectedCustomer} />
             <SimulatedProposal selectedCustomer={selectedCustomer} />
             <Offer selectedCustomer={selectedCustomer} />
-
-            <div>
-              <h1 className="font-bold text-lg">Oferta de Janeiro:</h1>
-              <p>* ISENÇÃO DA PRIMEIRA FATURA</p>
-              <p>
-                * AXS fornecerá 100% do kwh contratado dividido no 1º,2º e 3º
-                sendo 33,33% de energia
-              </p>
-              <p>* Plano sem fidelidade </p>
-              <p>
-                * Pode fazer alteração quando precisar para mais ou para menos.
-              </p>
-            </div>
           </section>
+
+          <div>
+            <h1 className="font-bold text-lg">Oferta de Janeiro:</h1>
+            <p>* ISENÇÃO DA PRIMEIRA FATURA</p>
+            <p>
+              * AXS fornecerá 100% do kwh contratado dividido no 1º,2º e 3º
+              sendo 33,33% de energia
+            </p>
+            <p>* Plano sem fidelidade </p>
+            <p>
+              * Pode fazer alteração quando precisar para mais ou para menos.
+            </p>
+          </div>
         </section>
 
         <section className="break-before-page">

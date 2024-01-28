@@ -16,7 +16,7 @@ const BaseClient = () => {
   ];
 
   return (
-    <section className="mt-9 border border-gray-600 mx-10 ">
+    <section className="mt-9 border border-gray-600 md:mx-10 ">
       <div>
         <h1 className="text-xl text-center text-green-600 font-bold mt-5">
           Nossos Clientes
@@ -25,13 +25,17 @@ const BaseClient = () => {
 
       <div className="grid grid-cols-5 gap-2 mt-5">
         {imageClients.map((logo, i) => (
-          <div key={i} className="w-24 h-24 mx-auto">
+          <div
+            key={i}
+            className="w-24 h-24 md:mx-auto col-start-3 md:col-start-0 col-span-2 md:col-span-1 "
+          >
             <Image
               src={logo}
               alt={`Logo ${i + 1}`}
               width={300}
               height={300}
               layout="responsive"
+              className=""
             />
           </div>
         ))}

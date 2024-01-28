@@ -33,9 +33,9 @@ const SimulatedProposal = () => {
   const tarifaMun = 11.37;
 
   return (
-    <div className="flex justify-between my-1">
-      <div>
-        <div className="flex my-3 justify-between ">
+    <div className=" flex flex-col md:flex-row  md:mx-auto md:justify-between">
+      <div className="w-full flex flex-col justify-center md:pr-2">
+        <div className="flex justify-between">
           <h1 className="font-bold">Valor KWh CPFL</h1>
           <p className="font-bold text-cyan-600">R$ {valorAtualCpfl}</p>
         </div>
@@ -43,7 +43,7 @@ const SimulatedProposal = () => {
         <table>
           <thead>
             <tr>
-              <td colSpan="3" className="text-center py-1  border border-black">
+              <td colSpan="3" className="text-center py-1 border border-black">
                 Comparativo do Mês
               </td>
             </tr>
@@ -95,11 +95,12 @@ const SimulatedProposal = () => {
         </table>
       </div>
 
-      <div>
-        <div className="flex my-3 justify-between ">
+      <div className="w-full flex flex-col justify-center  my-2  md:pl-2">
+        <div className="flex justify-between">
           <h1 className="font-bold">Valor KWh AXS</h1>
           <p className="font-bold  text-green-600 ">R$ {valorAtualAxs}</p>
         </div>
+
         <table>
           <thead>
             <tr>

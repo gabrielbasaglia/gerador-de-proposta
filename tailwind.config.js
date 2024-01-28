@@ -19,6 +19,9 @@ module.exports = {
       },
       screens: {
         a4: "210mm",
+        sm: "576px",
+        md: "700px",
+        lg: "1440px",
       },
       height: {
         a4: "297mm",
