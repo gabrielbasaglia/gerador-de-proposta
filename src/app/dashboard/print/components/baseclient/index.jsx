@@ -1,4 +1,4 @@
-import Image from "next/image"
+import Image from "next/image";
 
 const BaseClient = () => {
   const imageClients = [
@@ -13,7 +13,7 @@ const BaseClient = () => {
     "/sans brunos.png",
     "/redesol.jpeg",
     "/profitness.jpg",
-  ]
+  ];
 
   return (
     <section className="mt-9 border border-gray-600 mx-10 ">
@@ -49,7 +49,7 @@ const BaseClient = () => {
         <p>Condomínio Residencial Veneza</p>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default BaseClient
+export default BaseClient;

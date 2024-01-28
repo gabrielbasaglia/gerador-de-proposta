@@ -1,23 +1,23 @@
-import { NextResponse } from "next/server"
-import { getServerSession } from "next-auth"
-import { authOptions } from "../../../lib/auth"
-import prismaClient from "../../../lib/prisma"
+import { NextResponse } from "next/server";
+import { getServerSession } from "next-auth";
+import { authOptions } from "../../../lib/auth";
+import prismaClient from "../../../lib/prisma";
 
 export async function DELETE(request) {
-  const session = await getServerSession(authOptions)
+  const session = await getServerSession(authOptions);
 
   if (!session || !session.user) {
-    return NextResponse.json({ error: "Not authorized" }, { status: 401 })
+    return NextResponse.json({ error: "Not authorized" }, { status: 401 });
   }
 
-  const { searchParams } = new URL(request.url)
-  const userId = searchParams.get("id")
+  const { searchParams } = new URL(request.url);
+  const userId = searchParams.get("id");
 
   if (!userId) {
     return NextResponse.json(
       { error: "Failed delete customer" },
       { status: 400 },
-    )
+    );
   }
 
   try {
@@ -25,23 +25,23 @@ export async function DELETE(request) {
       where: {
         id: userId,
       },
-    })
+    });
 
-    return NextResponse.json({ message: "Cliente deletado com sucesso!" })
+    return NextResponse.json({ message: "Cliente deletado com sucesso!" });
   } catch (err) {
-    console.log(err)
+    console.log(err);
     return NextResponse.json(
       { error: "Failed delete customer" },
       { status: 400 },
-    )
+    );
   }
 }
 
 export async function POST(request) {
-  const session = await getServerSession(authOptions)
+  const session = await getServerSession(authOptions);
 
   if (!session || !session.user) {
-    return NextResponse.json({ error: "Unauthorized" }, { status: 401 })
+    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 
   const {
@@ -75,7 +75,7 @@ export async function POST(request) {
     kwh12,
     kwhValues,
     userId,
-  } = await request.json()
+  } = await request.json();
 
   try {
     await prismaClient.customer.create({
@@ -111,13 +111,13 @@ export async function POST(request) {
         kwhValues: kwhValues ? kwhValues : "",
         userId: userId,
       },
-    })
+    });
 
-    return NextResponse.json({ message: "Customer created" })
+    return NextResponse.json({ message: "Customer created" });
   } catch (error) {
     return NextResponse.json(
       { error: "Failed to create customer" },
       { status: 400 },
-    )
+    );
   }
 }

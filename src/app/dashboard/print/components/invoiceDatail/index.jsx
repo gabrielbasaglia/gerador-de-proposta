@@ -1,8 +1,8 @@
-import React, { useContext } from "react"
-import { ModalContext } from "../../../../../providers/modal"
+import React, { useContext } from "react";
+import { ModalContext } from "../../../../../providers/modal";
 
 const InvoiceDetails = () => {
-  const { selectedCustomer, calculateAverage } = useContext(ModalContext)
+  const { selectedCustomer, calculateAverage } = useContext(ModalContext);
 
   // Verifica se selectedCustomer está definido
   if (!selectedCustomer) {
@@ -10,25 +10,25 @@ const InvoiceDetails = () => {
       <div>
         <p>Carregando...</p>
       </div>
-    )
+    );
   }
 
   // Calcula a média usando a função do contexto
   const kwhValues = Array.from(
     { length: 12 },
     (_, index) => selectedCustomer?.[`kwh${index + 1}`] || "",
-  )
-  const average = calculateAverage(kwhValues)
+  );
+  const average = calculateAverage(kwhValues);
 
   // Gera as linhas da tabela
   const generateTableRows = () => {
-    const rows = []
+    const rows = [];
     for (let i = 0; i < 2; i++) {
       const rowData = Array.from(
         { length: 6 },
         (_, j) => selectedCustomer?.[`kwh${i * 6 + j + 1}`],
-      )
-      const nonEmptyCells = rowData.filter(Boolean) // Filter out cells with no values
+      );
+      const nonEmptyCells = rowData.filter(Boolean); // Filter out cells with no values
       if (nonEmptyCells.length > 0) {
         rows.push(
           <tr key={i}>
@@ -41,11 +41,11 @@ const InvoiceDetails = () => {
               </td>
             ))}
           </tr>,
-        )
+        );
       }
     }
-    return rows
-  }
+    return rows;
+  };
 
   return (
     <div>
@@ -68,7 +68,7 @@ const InvoiceDetails = () => {
         <p className="border border-black mx-10 mt-1 text-center">{average}</p>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default InvoiceDetails
+export default InvoiceDetails;

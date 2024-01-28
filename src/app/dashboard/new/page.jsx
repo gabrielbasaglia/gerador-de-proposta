@@ -1,25 +1,25 @@
-import { Container } from "../../../components/container"
-import Link from "next/link"
-import { getServerSession } from "next-auth"
-import { authOptions } from "../../../lib/auth"
-import { redirect } from "next/navigation"
-import prismaClient from "../../../lib/prisma"
+import { Container } from "../../../components/container";
+import Link from "next/link";
+import { getServerSession } from "next-auth";
+import { authOptions } from "../../../lib/auth";
+import { redirect } from "next/navigation";
+import prismaClient from "../../../lib/prisma";
 
 export default async function NewCote() {
-  const session = await getServerSession(authOptions)
+  const session = await getServerSession(authOptions);
 
   if (!session || !session.user) {
-    redirect("/")
+    redirect("/");
   }
 
   const customers = await prismaClient.customer.findMany({
     where: {
       userId: session.user.id,
     },
-  })
+  });
 
   async function handleRegisterCote(formData) {
-    "use server"
+    "use server";
   }
 
   return (
@@ -89,5 +89,5 @@ export default async function NewCote() {
         </form>
       </main>
     </Container>
-  )
+  );
 }

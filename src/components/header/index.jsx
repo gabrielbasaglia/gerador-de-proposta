@@ -1,18 +1,18 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import { FiUser, FiLogOut, FiLoader, FiLock } from "react-icons/fi"
-import { signIn, signOut, useSession } from "next-auth/react"
+import Link from "next/link";
+import { FiUser, FiLogOut, FiLoader, FiLock } from "react-icons/fi";
+import { signIn, signOut, useSession } from "next-auth/react";
 
 export function Header() {
-  const { status, data } = useSession()
+  const { status, data } = useSession();
 
   async function handleSignIn() {
-    await signIn()
+    await signIn();
   }
 
   async function handleSignOut() {
-    await signOut()
+    await signOut();
   }
 
   return (
@@ -50,5 +50,5 @@ export function Header() {
         )}
       </div>
     </header>
-  )
+  );
 }

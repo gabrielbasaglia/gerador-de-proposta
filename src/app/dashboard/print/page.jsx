@@ -1,26 +1,26 @@
-"use client"
-import { useContext, useRef } from "react"
-import { Container } from "../../../components/container"
-import Image from "next/image"
-import axsImg from "../../../assets/axs.webp"
-import logoCpfl from "../../../assets/logoCpfl.png"
-import mplogo from "../../../assets/mplogo.webp"
-import { ModalContext } from "../../../providers/modal"
-import { useReactToPrint } from "react-to-print"
+"use client";
+import { useContext, useRef } from "react";
+import { Container } from "../../../components/container";
+import Image from "next/image";
+import axsImg from "../../../assets/axs.webp";
+import logoCpfl from "../../../assets/logoCpfl.png";
+import mplogo from "../../../assets/mplogo.webp";
+import { ModalContext } from "../../../providers/modal";
+import { useReactToPrint } from "react-to-print";
 
-import DetailsSection from "./components/detailsection"
-import SimulatedProposal from "./components/simulatedproposal"
-import Offer from "./components/Offer"
-import InvoiceDetails from "./components/invoiceDatail"
-import BaseClient from "./components/baseclient"
+import DetailsSection from "./components/detailsection";
+import SimulatedProposal from "./components/simulatedproposal";
+import Offer from "./components/Offer";
+import InvoiceDetails from "./components/invoiceDatail";
+import BaseClient from "./components/baseclient";
 
 export default function Print() {
-  const contentDocument = useRef()
-  const { selectedCustomer } = useContext(ModalContext)
+  const contentDocument = useRef();
+  const { selectedCustomer } = useContext(ModalContext);
 
   const handlePrint = useReactToPrint({
     content: () => contentDocument.current,
-  })
+  });
 
   return (
     <Container>
@@ -100,5 +100,5 @@ export default function Print() {
         </section>
       </main>
     </Container>
-  )
+  );
 }

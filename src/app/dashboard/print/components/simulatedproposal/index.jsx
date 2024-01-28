@@ -1,36 +1,36 @@
-import { useContext, useEffect, useState } from "react"
-import { ModalContext } from "../../../../../providers/modal"
+import { useContext, useEffect, useState } from "react";
+import { ModalContext } from "../../../../../providers/modal";
 
 const SimulatedProposal = () => {
-  const { selectedCustomer, calculateAverage } = useContext(ModalContext)
-  const [average, setAverage] = useState(0)
+  const { selectedCustomer, calculateAverage } = useContext(ModalContext);
+  const [average, setAverage] = useState(0);
 
   useEffect(() => {
     const kwhValues = Array.from(
       { length: 12 },
       (_, index) => selectedCustomer?.[`kwh${index + 1}`] || 0,
-    )
+    );
 
     // Filter out zero values
-    const validKwhValues = kwhValues.filter((value) => value !== 0)
+    const validKwhValues = kwhValues.filter((value) => value !== 0);
 
     if (validKwhValues.length > 0) {
-      const calculatedAverage = calculateAverage(validKwhValues)
-      setAverage(calculatedAverage)
+      const calculatedAverage = calculateAverage(validKwhValues);
+      setAverage(calculatedAverage);
     } else {
       // No valid values, set average to 0
-      setAverage(0)
+      setAverage(0);
     }
-  }, [calculateAverage, selectedCustomer])
+  }, [calculateAverage, selectedCustomer]);
 
   const valorAtualCpfl =
     (Number(selectedCustomer?.cpfltusd.replace("R$", "").replace(",", ".")) ||
       0) +
-    (Number(selectedCustomer?.cpflte.replace("R$", "").replace(",", ".")) || 0)
+    (Number(selectedCustomer?.cpflte.replace("R$", "").replace(",", ".")) || 0);
 
-  const valorAtualAxs = 0.71962
+  const valorAtualAxs = 0.71962;
 
-  const tarifaMun = 11.37
+  const tarifaMun = 11.37;
 
   return (
     <div className="flex justify-between my-1 mx-2">
@@ -152,7 +152,7 @@ const SimulatedProposal = () => {
         </table>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default SimulatedProposal
+export default SimulatedProposal;

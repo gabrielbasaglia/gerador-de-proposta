@@ -1,65 +1,65 @@
-import { useContext, useEffect, useState } from "react"
-import { ModalContext } from "../../../../../providers/modal"
+import { useContext, useEffect, useState } from "react";
+import { ModalContext } from "../../../../../providers/modal";
 
 const Offer = () => {
-  const { selectedCustomer, calculateAverage } = useContext(ModalContext)
-  const [average, setAverage] = useState(0)
+  const { selectedCustomer, calculateAverage } = useContext(ModalContext);
+  const [average, setAverage] = useState(0);
 
   useEffect(() => {
     const kwhValues = Array.from(
       { length: 12 },
       (_, index) => selectedCustomer?.[`kwh${index + 1}`] || 0,
-    )
+    );
 
     // Filter out zero values
-    const validKwhValues = kwhValues.filter((value) => value !== 0)
+    const validKwhValues = kwhValues.filter((value) => value !== 0);
 
     if (validKwhValues.length > 0) {
-      const calculatedAverage = calculateAverage(validKwhValues)
-      setAverage(calculatedAverage)
+      const calculatedAverage = calculateAverage(validKwhValues);
+      setAverage(calculatedAverage);
     } else {
       // No valid values, set average to 0
-      setAverage(0)
+      setAverage(0);
     }
-  }, [calculateAverage, selectedCustomer])
+  }, [calculateAverage, selectedCustomer]);
 
   // Função para atribuir valores com base na classificação
   const atribuirValor = (classification) => {
     switch (classification) {
       case "monofasico":
-        return 30
+        return 30;
       case "bifasico":
-        return 50
+        return 50;
       case "trifasico":
-        return 100
+        return 100;
       default:
-        return 0
+        return 0;
     }
-  }
+  };
 
   const valorAtualCpfl =
     (Number(selectedCustomer?.cpfltusd.replace("R$", "").replace(",", ".")) ||
       0) +
-    (Number(selectedCustomer?.cpflte.replace("R$", "").replace(",", ".")) || 0)
+    (Number(selectedCustomer?.cpflte.replace("R$", "").replace(",", ".")) || 0);
 
-  const valorAtualAxs = 0.71962
+  const valorAtualAxs = 0.71962;
 
-  const tarifaMun = 11.37
+  const tarifaMun = 11.37;
 
-  const tarifaBoleto = 3.17
+  const tarifaBoleto = 3.17;
 
-  const classification = selectedCustomer?.classification || "monofasico"
+  const classification = selectedCustomer?.classification || "monofasico";
 
   // Obtém o valor atribuído com base na classificação
-  const valorAtribuido = atribuirValor(classification)
+  const valorAtribuido = atribuirValor(classification);
 
   // Calcula o valor final usando o valor atribuído
-  const valorFinal = average - valorAtribuido
+  const valorFinal = average - valorAtribuido;
 
   // Calcula o minimo da CPFl
-  const minCpfl = valorAtribuido * valorAtualCpfl + tarifaMun
+  const minCpfl = valorAtribuido * valorAtualCpfl + tarifaMun;
 
-  const valorTotal = valorFinal * valorAtualAxs + minCpfl
+  const valorTotal = valorFinal * valorAtualAxs + minCpfl;
 
   return (
     <div className=" my-2 ">
@@ -119,7 +119,7 @@ const Offer = () => {
         </p>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Offer
+export default Offer;

@@ -1,16 +1,16 @@
-import { Container } from "../../components/container"
-import { getServerSession } from "next-auth"
-import { authOptions } from "../../lib/auth"
-import { redirect } from "next/navigation"
-import Link from "next/link"
-import { PropostasItem } from "../../app/dashboard/components/propostas/index"
-import Image from "next/image"
-import desenvol from "../../assets/desenvol.gif"
+import { Container } from "../../components/container";
+import { getServerSession } from "next-auth";
+import { authOptions } from "../../lib/auth";
+import { redirect } from "next/navigation";
+import Link from "next/link";
+import { PropostasItem } from "../../app/dashboard/components/propostas/index";
+import Image from "next/image";
+import desenvol from "../../assets/desenvol.gif";
 export default async function Dashboard() {
-  const session = await getServerSession(authOptions)
+  const session = await getServerSession(authOptions);
 
   if (!session || !session.user) {
-    redirect("/")
+    redirect("/");
   }
 
   return (
@@ -44,5 +44,5 @@ export default async function Dashboard() {
         </table>
       </main>
     </Container>
-  )
+  );
 }

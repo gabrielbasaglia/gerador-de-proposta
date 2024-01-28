@@ -1,4 +1,4 @@
-import { FiTrash2, FiFile } from "react-icons/fi"
+import { FiTrash2, FiFile } from "react-icons/fi";
 
 export function PropostasItem() {
   return (
@@ -19,5 +19,5 @@ export function PropostasItem() {
         </td>
       </tr>
     </>
-  )
+  );
 }

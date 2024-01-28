@@ -1,13 +1,13 @@
-"use client"
+"use client";
 
-import { useContext } from "react"
-import { ModalContext } from "../../../../../providers/modal"
-import { api } from "../../../../../lib/api"
-import { useRouter } from "next/navigation"
+import { useContext } from "react";
+import { ModalContext } from "../../../../../providers/modal";
+import { api } from "../../../../../lib/api";
+import { useRouter } from "next/navigation";
 
 export function CardCustomer({ customer }) {
-  const { setDatailCustomer } = useContext(ModalContext)
-  const router = useRouter()
+  const { setDatailCustomer } = useContext(ModalContext);
+  const router = useRouter();
 
   //const [selectedCustomer, setSelectedCustomer] = useState(null);
 
@@ -17,18 +17,18 @@ export function CardCustomer({ customer }) {
         params: {
           id: customer.id,
         },
-      })
+      });
 
-      console.log(response.data)
-      router.refresh()
+      console.log(response.data);
+      router.refresh();
     } catch (err) {
-      console.log(err)
+      console.log(err);
     }
   }
   function handlePrintCustomer() {
-    setDatailCustomer(customer)
+    setDatailCustomer(customer);
 
-    router.push("./print")
+    router.push("./print");
   }
 
   return (
@@ -60,5 +60,5 @@ export function CardCustomer({ customer }) {
         </button>
       </div>
     </article>
-  )
+  );
 }

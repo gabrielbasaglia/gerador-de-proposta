@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
 export const Footer = () => {
   // Obtém o ano atual
-  const currentYear = new Date().getFullYear()
+  const currentYear = new Date().getFullYear();
 
   return (
     <footer className="footer text-center mt-auto mb-1 bg-slate-100 p-2">
@@ -20,5 +20,5 @@ export const Footer = () => {
         .
       </small>
     </footer>
-  )
-}
+  );
+};

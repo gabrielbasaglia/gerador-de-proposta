@@ -1,23 +1,23 @@
-"use client"
+"use client";
 
-import { useRouter } from "next/navigation"
-import { useState } from "react"
-import { useForm } from "react-hook-form"
-import { api } from "../../../../../lib/api"
+import { useRouter } from "next/navigation";
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { api } from "../../../../../lib/api";
 
 export function NewCustomerForm({ userId }) {
-  const { register, handleSubmit, setValue, getValues } = useForm()
-  const router = useRouter()
+  const { register, handleSubmit, setValue, getValues } = useForm();
+  const router = useRouter();
 
-  const kwhInputs = Array.from({ length: 12 }, (_, index) => `kwh${index + 1}`)
+  const kwhInputs = Array.from({ length: 12 }, (_, index) => `kwh${index + 1}`);
 
   const handleInputChange = (index, value) => {
-    setValue(`kwh${index + 1}`, value)
-  }
+    setValue(`kwh${index + 1}`, value);
+  };
 
   async function handleRegisterCustomer(data) {
-    const kwhValues = kwhInputs.map((input, index) => data[`kwh${index + 1}`])
-    console.log(data)
+    const kwhValues = kwhInputs.map((input, index) => data[`kwh${index + 1}`]);
+    console.log(data);
 
     await api.post("/api/customer", {
       name: data.name,
@@ -49,10 +49,10 @@ export function NewCustomerForm({ userId }) {
       kwh10: data.kwh10,
       kwh11: data.kwh11,
       kwh12: data.kwh12,
-    })
+    });
 
-    router.replace("/dashboard/customer")
-    router.refresh()
+    router.replace("/dashboard/customer");
+    router.refresh();
   }
   return (
     <form
@@ -268,5 +268,5 @@ export function NewCustomerForm({ userId }) {
         Cadastrar
       </button>
     </form>
-  )
+  );
 }
