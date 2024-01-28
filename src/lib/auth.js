@@ -1,7 +1,7 @@
-import { PrismaAdapter } from "@auth/prisma-adapter";
-import GoogleProvider from "next-auth/providers/google";
+import { PrismaAdapter } from '@auth/prisma-adapter'
+import GoogleProvider from 'next-auth/providers/google'
 
-import prismaClient from "./prisma";
+import prismaClient from './prisma'
 
 export const authOptions = {
   adapter: PrismaAdapter(prismaClient),
@@ -13,9 +13,9 @@ export const authOptions = {
   ],
   callbacks: {
     async session({ session, user }) {
-      session.user = { ...session.user, id: user.id };
+      session.user = { ...session.user, id: user.id }
 
-      return session;
+      return session
     },
   },
-};
+}

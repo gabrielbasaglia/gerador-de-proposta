@@ -1,14 +1,14 @@
-"use client";
+'use client'
 
 export const Footer = () => {
   // Obtém o ano atual
-  const currentYear = new Date().getFullYear();
+  const currentYear = new Date().getFullYear()
 
   return (
     <footer className="footer text-center mt-auto mb-1 bg-slate-100 p-2">
       <small>
         &copy; {currentYear} | Todos os direitos reservados. Construído com ♥
-        por{" "}
+        por{' '}
         <a
           href="https://gabrielbasaglia.tech/"
           target="_blank"
@@ -20,5 +20,5 @@ export const Footer = () => {
         .
       </small>
     </footer>
-  );
-};
+  )
+}

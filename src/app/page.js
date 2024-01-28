@@ -1,5 +1,5 @@
-import Image from "next/image";
-import heroImg from "../assets/hero.svg";
+import Image from 'next/image'
+import heroImg from '../assets/hero.svg'
 export default function Home() {
   return (
     <main className="flex items-center flex-col justify-center min-h-[calc(100vh-10rem)]">
@@ -14,5 +14,5 @@ export default function Home() {
         className="max-w-sm md:max-w-xl"
       />
     </main>
-  );
+  )
 }

@@ -1,17 +1,17 @@
-import { Inter } from "next/font/google";
-import "./globals.css";
-import { Header } from "../components/header/index.jsx";
-import { Footer } from "../components/footer/index.jsx";
-import { AuthProvider } from "../providers/auth.jsx";
-import { ModalProvider } from "../providers/modal.jsx";
+import { Inter } from 'next/font/google'
+import './globals.css'
+import { Header } from '../components/header/index.jsx'
+import { Footer } from '../components/footer/index.jsx'
+import { AuthProvider } from '../providers/auth.jsx'
+import { ModalProvider } from '../providers/modal.jsx'
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: "Gerador de propostas",
+  title: 'Gerador de propostas',
 
-  description: "Realize orçamentos para seus clientes",
-};
+  description: 'Realize orçamentos para seus clientes',
+}
 
 // eslint-disable-next-line react/prop-types
 export default function RootLayout({ children }) {
@@ -29,5 +29,5 @@ export default function RootLayout({ children }) {
         </AuthProvider>
       </body>
     </html>
-  );
+  )
 }
