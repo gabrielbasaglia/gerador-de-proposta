@@ -69,8 +69,8 @@ const Offer = () => {
         </h2>
 
         <div className=" text-center p-1 md:my-2 md:w-1/2 mx-auto flex justify-center flex-col border border-black">
-          <h1 className="border-b border-black">
-            Valor da assinatura AXS + Boleto de R$3,00
+          <h1 className="border-b border-black font-bold p-1">
+            Valor da assinatura AXS
           </h1>
 
           <div className="bg-green-600 grid grid-cols-2 border-b border-black ">
@@ -114,7 +114,7 @@ const Offer = () => {
             </span>
           </div>
         </div>
-        <p className="scale-90">
+        <p className="text-sm mx-10">
           OBS: o desconto homologado é de 10%, devido alguns impostos pode
           chegar até a porcentagem acima..
         </p>
