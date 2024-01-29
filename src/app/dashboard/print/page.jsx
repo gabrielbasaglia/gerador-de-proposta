@@ -79,7 +79,7 @@ export default function Print() {
             <Offer selectedCustomer={selectedCustomer} />
           </section>
 
-          <div>
+          <div className="md:mx-10 text-sm">
             <h1 className="font-bold text-lg">Oferta de Janeiro:</h1>
             <p>* ISENÇÃO DA PRIMEIRA FATURA</p>
             <p>
