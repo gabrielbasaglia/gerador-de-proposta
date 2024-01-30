@@ -28,6 +28,7 @@ const SimulatedProposal = () => {
       0) +
     (Number(selectedCustomer?.cpflte.replace("R$", "").replace(",", ".")) || 0);
 
+  const PadraoValorAtualCpfl = valorAtualCpfl.toFixed(8);
   const valorAtualAxs = 0.71962;
 
   const tarifaMun = 11.37;
@@ -37,7 +38,7 @@ const SimulatedProposal = () => {
       <div className="w-full flex flex-col justify-center md:pr-2">
         <div className="flex justify-between">
           <h1 className="font-bold">Valor KWh CPFL</h1>
-          <p className="font-bold text-cyan-600">R$ {valorAtualCpfl}</p>
+          <p className="font-bold text-cyan-600">R$ {PadraoValorAtualCpfl}</p>
         </div>
 
         <table>
@@ -65,11 +66,11 @@ const SimulatedProposal = () => {
                 {selectedCustomer?.kwh1}
               </td>
               <td className="text-center  py-2 px-1 border bg-cyan-600 border-black">
-                {valorAtualCpfl}
+                {PadraoValorAtualCpfl}
               </td>
               <td className="text-center  py-2 px-1 border bg-cyan-600 border-black">
                 {(
-                  selectedCustomer?.kwh1 * valorAtualCpfl +
+                  selectedCustomer?.kwh1 * PadraoValorAtualCpfl +
                   tarifaMun
                 ).toLocaleString("pt-BR", {
                   style: "currency",
@@ -126,7 +127,7 @@ const SimulatedProposal = () => {
                 {average}
               </td>
               <td className="text-center  py-2 px-1 border bg-cyan-600 border-black">
-                {valorAtualCpfl}
+                {PadraoValorAtualCpfl}
               </td>
               <td className="text-center  py-2 px-1 border bg-cyan-600 border-black">
                 {(average * valorAtualCpfl + 11.37).toLocaleString("pt-BR", {
