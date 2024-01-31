@@ -15,7 +15,7 @@ Aqui estão algumas capturas de tela do Gerador de Proposta:
 
 # Gerador de Proposta 📄
 
-O **Gerador de Proposta** é uma aplicação desenvolvida para resolver a necessidade de criar propostas detalhadas, comparando o consumo atual com o consumo proposto, além de permitir o acompanhamento de clientes cadastrados.
+O **Gerador de Proposta** é uma aplicação desenvolvida para resolver a necessidade de criar propostas detalhadas, comparando o valor de energia atual com o valor de energia proposto, além de permitir o acompanhamento de clientes cadastrados.
 
 ## Funcionalidades 🚀
 
