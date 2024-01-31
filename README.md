@@ -1,48 +1,50 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with
-[`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Gerador de Proposta
 
-## Getting Started
+# Screenshots 📷
 
-First, run the development server:
+Aqui estão algumas capturas de tela do Gerador de Proposta:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px;">
+  <img src="./src/assets/readme/1.png" alt="Screenshot 1" width="200"/>
+  <img src="./src/assets/readme/2.png" alt="Screenshot 2" width="200"/>
+  <img src="./src/assets/readme/3.png" alt="Screenshot 3" width="200"/>
+  <img src="./src/assets/readme/4.png" alt="Screenshot 4" width="200"/>
+  <img src="./src/assets/readme/5.png" alt="Screenshot 5" width="200"/>
+  <img src="./src/assets/readme/6.png" alt="Screenshot 6" width="200"/>
+</div> <br>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the
-result.
+O **Gerador de Proposta** é uma aplicação desenvolvida para resolver a necessidade de criar propostas detalhadas, comparando o consumo atual com o consumo proposto, além de permitir o acompanhamento de clientes cadastrados.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates
-as you edit the file.
+# Gerador de Proposta 📄
 
-This project uses
-[`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to
-automatically optimize and load Inter, a custom Google Font.
+O **Gerador de Proposta** é uma aplicação desenvolvida para resolver a necessidade de criar propostas detalhadas, comparando o consumo atual com o consumo proposto, além de permitir o acompanhamento de clientes cadastrados.
 
-## Learn More
+## Funcionalidades 🚀
 
-To learn more about Next.js, take a look at the following resources:
+- Criação de propostas detalhadas.
+- Comparação de consumo atual e proposto.
+- Gerenciamento de clientes cadastrados.
+- Acesso restrito para cada usuário, permitindo visualização apenas de seus próprios clientes.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js
-  features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Tecnologias Utilizadas 🛠️
 
-You can check out
-[the Next.js GitHub repository](https://github.com/vercel/next.js/) - your
-feedback and contributions are welcome!
+### Backend
 
-## Deploy on Vercel
+- MongoDB
+- Prisma
+- Axios
 
-The easiest way to deploy your Next.js app is to use the
-[Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme)
-from the creators of Next.js.
+### Frontend
 
-Check out our
-[Next.js deployment documentation](https://nextjs.org/docs/deployment) for more
-details.
+- Nextjs
+- React-hook-form para formulários.
+- React-to-print para geração de PDF das propostas.
+- Totalmente responsivo para utilização em qualquer tela.
+
+## Instalação 📦
+
+1. Clone o repositório:
+
+   ```bash
+   git clone https://github.com/gabrielbasaglia/gerador-de-proposta.git
+   ```
