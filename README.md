@@ -20,7 +20,7 @@ O **Gerador de Proposta** é uma aplicação desenvolvida para resolver a necess
 ## Funcionalidades 🚀
 
 - Criação de propostas detalhadas.
-- Comparação de consumo atual e proposto.
+- Comparação do valor de fatura atual e proposto.
 - Gerenciamento de clientes cadastrados.
 - Acesso restrito para cada usuário, permitindo visualização apenas de seus próprios clientes.
 
