@@ -13,8 +13,6 @@ Aqui estão algumas capturas de tela do Gerador de Proposta:
   <img src="./src/assets/readme/6.png" alt="Screenshot 6" width="200"/>
 </div> <br>
 
-O **Gerador de Proposta** é uma aplicação desenvolvida para resolver a necessidade de criar propostas detalhadas, comparando o consumo atual com o consumo proposto, além de permitir o acompanhamento de clientes cadastrados.
-
 # Gerador de Proposta 📄
 
 O **Gerador de Proposta** é uma aplicação desenvolvida para resolver a necessidade de criar propostas detalhadas, comparando o consumo atual com o consumo proposto, além de permitir o acompanhamento de clientes cadastrados.
