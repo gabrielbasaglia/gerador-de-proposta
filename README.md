@@ -1,8 +1,8 @@
-# Gerador de Proposta
+# Proposal Generator
 
 # Screenshots 📷
 
-Aqui estão algumas capturas de tela do Gerador de Proposta:
+Here are some screenshots of the Proposal Generator:
 
 <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px;">
   <img src="./src/assets/readme/1.png" alt="Screenshot 1" width="200"/>
@@ -13,35 +13,37 @@ Aqui estão algumas capturas de tela do Gerador de Proposta:
   <img src="./src/assets/readme/6.png" alt="Screenshot 6" width="200"/>
 </div> <br>
 
-# Gerador de Proposta 📄
+The **Proposal Generator** is an application developed to address the need for creating detailed proposals, comparing current consumption with proposed consumption, and allowing the tracking of registered clients.
 
-O **Gerador de Proposta** é uma aplicação desenvolvida para resolver a necessidade de criar propostas detalhadas, comparando o valor de energia atual com o valor de energia proposto, além de permitir o acompanhamento de clientes cadastrados.
+## Proposal Generator 📄
 
-## Funcionalidades 🚀
+The **Proposal Generator** is an application developed to address the need for creating detailed proposals, comparing current consumption with proposed consumption, and allowing the tracking of registered clients.
 
-- Criação de propostas detalhadas.
-- Comparação do valor de fatura atual e proposto.
-- Gerenciamento de clientes cadastrados.
-- Acesso restrito para cada usuário, permitindo visualização apenas de seus próprios clientes.
+### Features 🚀
 
-## Tecnologias Utilizadas 🛠️
+- Creation of detailed proposals.
+- Comparison of current and proposed consumption.
+- Management of registered clients.
+- Restricted access for each user, allowing the view only of their own clients.
 
-### Backend
+### Technologies Used 🛠️
+
+#### Backend
 
 - MongoDB
 - Prisma
 - Axios
 
-### Frontend
+#### Frontend
 
 - Nextjs
-- React-hook-form para formulários.
-- React-to-print para geração de PDF das propostas.
-- Totalmente responsivo para utilização em qualquer tela.
+- React-hook-form for forms.
+- React-to-print for PDF generation of proposals.
+- Fully responsive for use on any screen.
 
-## Instalação 📦
+## Installation 📦
 
-1. Clone o repositório:
+1. Clone the repository:
 
    ```bash
    git clone https://github.com/gabrielbasaglia/gerador-de-proposta.git
