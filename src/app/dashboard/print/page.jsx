@@ -80,13 +80,13 @@ export default function Print() {
           </section>
 
           <div className="md:mx-10 text-sm">
-            <h1 className="font-bold text-lg">Oferta de Janeiro:</h1>
+            <h1 className="font-bold text-lg">Oferta de Fevereiro:</h1>
             <p>* ISENÇÃO DA PRIMEIRA FATURA</p>
             <p>
               * AXS fornecerá 100% do kwh contratado dividido no 1º,2º e 3º
-              sendo 33,33% de energia
+              sendo 33,33% de energia.
             </p>
-            <p>* Plano sem fidelidade </p>
+            <p>* Plano sem fidelidade. </p>
             <p>
               * Pode fazer alteração quando precisar para mais ou para menos.
             </p>
