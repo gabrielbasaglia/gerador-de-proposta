@@ -46,7 +46,7 @@ const Offer = () => {
 
   const tarifaMun = 11.37;
 
-  const tarifaBoleto = 3.17;
+  const tarifaBoleto = 3;
 
   const classification = selectedCustomer?.classification || "monofasico";
 
@@ -59,7 +59,9 @@ const Offer = () => {
   // Calcula o minimo da CPFl
   const minCpfl = valorAtribuido * valorAtualCpfl + tarifaMun;
 
-  const valorTotal = valorFinal * valorAtualAxs + minCpfl;
+  const valorFinalCpfl = average * valorAtualCpfl + tarifaMun;
+
+  const valorTotal = valorFinal * valorAtualAxs + minCpfl + tarifaBoleto;
 
   return (
     <div className=" my-2 ">
@@ -98,25 +100,19 @@ const Offer = () => {
           <div className="flex justify-between p-3 h-10 items-center bg-green-400">
             <h1 className="text-md font-bold">Valor Total</h1>
             <p className="text-md font-bold">
-              {(valorTotal + tarifaBoleto).toLocaleString("pt-BR", {
+              {valorTotal.toLocaleString("pt-BR", {
                 style: "currency",
                 currency: "BRL",
               })}
             </p>
             <span className="text-2xl font-bold border border-black w-1/3 pl-1">
-              {" "}
-              {parseInt(
-                ((average * valorAtualCpfl - valorTotal) /
-                  (average * valorAtualCpfl)) *
-                  100,
-              )}
-              %
+              {parseInt(((valorFinalCpfl - valorTotal) / valorTotal) * 100)}%
             </span>
           </div>
         </div>
         <p className="scale-90">
           OBS: o desconto homologado é de 10%, devido alguns impostos pode
-          chegar até a porcentagem acima..
+          chegar até a porcentagem acima...
         </p>
       </div>
     </div>

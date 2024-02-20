@@ -80,7 +80,7 @@ export default function Print() {
           </section>
 
           <div>
-            <h1 className="font-bold text-lg">Oferta de Janeiro:</h1>
+            <h1 className="font-bold text-lg">Oferta de Fevereiro:</h1>
             <p>* ISENÇÃO DA PRIMEIRA FATURA</p>
             <p>
               * AXS fornecerá 100% do kwh contratado dividido no 1º,2º e 3º
