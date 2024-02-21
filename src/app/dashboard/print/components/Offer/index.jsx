@@ -106,9 +106,7 @@ const Offer = () => {
             <span className="text-2xl font-bold border border-black w-1/3 pl-1">
               {" "}
               {parseInt(
-                ((average * valorAtualCpfl - valorTotal) /
-                  (average * valorAtualCpfl)) *
-                  100,
+                ((average * valorAtualCpfl - valorTotal) / valorTotal) * 100,
               )}
               %
             </span>
